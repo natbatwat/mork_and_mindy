@@ -1,0 +1,6 @@
+require "instagram"
+
+.instagram-feed
+  .singapore-photos
+    - @singapore_photos.each do |object|
+      = image_tag(object.images.thumbnail.url)
