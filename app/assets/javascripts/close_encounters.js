@@ -6,205 +6,77 @@ $(document).ready(function () {
   var note3;
   var note4;
   var note5;
-  
+
   function startColor(key) {
-    $('#' + key).css({'background-color': 'white'});
+    // $('#' + key).css({'background-color': 'white'});
   }
 
   function endColor(key) {
-    $('#' + key).css({'background-color': 'yellow'});
+    // $('#' + key).css({'background-color': 'yellow'});
   }
       
-
   $(document).keypress(function(e){
     actualkey=String.fromCharCode(e.keyCode)
     switch(actualkey) {
       case 'a':
-        startColor('a');
-        groupWar.play();
+        // startColor('a');
+        console.log(actualkey);
+        console.log('a');
+        note1.play();
         break;
-      case 's':
-        startColor('s');
-        whatGood.play();
+      case 'p':
+        // startColor('s');
+        note2.play();
         break;
-      case 'd':
-        startColor('d');
-        nothing.play();
-        break;
-      case 'y':
-        startColor('y');
-        huhOne.play();
-        break;
-      case 'u':
-        startColor('u');
-        huhTwo.play();
-        break;
-      case 'i':
-        startColor('i');
-        huhThree.play();
-        break;
-      case 'o':
-        startColor('o');
-        huhFour.play();
+      case 'r':
+        // startColor('d');
+        note3.play();
         break;
       case 'b':
-        startColor('b');
-        huhFive.play();
+        // startColor('y');
+        note4.play();
         break;
-      case 'j':
-        startColor('j');
-        absolutely.play();
-        break;
-      case 'k':
-        startColor('k');
-        sayItAgain.play();
-        break;
-      case 'l':
-        startColor('l');
-        goodGod.play();
-        break;
-      case 'f':
-        startColor('f');
-        iSaidWar.play();
-        break;
-      case 'h':
-        startColor('h');
-        ahWar.play();
-        break;
-      case 'n':
-        startColor('n');
-        listenToMeOne.play();
-        break;
-      case 'm':
-        startColor('m');
-        listenTwo.play();
-        break;
-      case 'v':
-        startColor('v');
-        lookout.play();
-        break;
-      case 'c':
-        startColor('c');
-        ohLord.play();
-        break;
-      case 'g':
-        startColor('g');
-        yeah.play();
+      case 'q':
+        // startColor('u');
+        note5.play();
         break;
     }
   });
 
   soundManager.setup({
-    url: 'js/soundmanager2/swf',
+    url: 'assets/swf',
     onready: function() {
-      groupWar = soundManager.createSound({
-        url: 'audio/group_war.wav',
+      console.log('note1');
+      note1 = soundManager.createSound({
+        url: 'assets/audio/note1.wav',
         onfinish: function() {
-           endColor('a');
-         }
+           // endColor('a');
+        }
       });
-      whatGood = soundManager.createSound({
-        url: 'audio/what_is_it_good_for.wav',
-        onfinish: function() {
-           endColor('s');
-         }
-      });
-      nothing = soundManager.createSound({
-        url: 'audio/nothing.wav',
-        onfinish: function() {
-           endColor('d');
-         }
-      });
-      huhOne = soundManager.createSound({
-        url: 'audio/huh.wav',
-        onfinish: function() {
-           endColor('y');
-         }
-      });
-      huhTwo = soundManager.createSound({
-        url: 'audio/huh-2.wav',
-        onfinish: function() {
-           endColor('u');
-         }
-      });
-      huhThree = soundManager.createSound({
-        url: 'audio/huh_3.wav',
-        onfinish: function() {
-           endColor('i');
-         }
-      });
-      huhFour = soundManager.createSound({
-        url: 'audio/huha.wav',
-        onfinish: function() {
-           endColor('o');
-         }
-      });
-      huhFive = soundManager.createSound({
-        url: 'audio/uh_huh.wav',
-        onfinish: function() {
-           endColor('b');
-         }
-      });
-      absolutely = soundManager.createSound({
-        url: 'audio/absolutely.wav',
-        onfinish: function() {
-           endColor('j');
-         }
-      });
-      sayItAgain = soundManager.createSound({
-        url: 'audio/say_it_again.wav',
-        onfinish: function() {
-           endColor('k');
-         }
-      });
-      ahWar = soundManager.createSound({
-        url: 'audio/ah_war.wav',
-        onfinish: function() {
-           endColor('h');
-         }
-      });
-      goodGod = soundManager.createSound({
-        url: 'audio/good_god.wav',
-        onfinish: function() {
-           endColor('l');
-         }
-      });
-      iSaidWar = soundManager.createSound({
-        url: 'audio/i_said_war.wav',
-        onfinish: function() {
-           endColor('f');
-         }
-      });
-      listenToMeOne = soundManager.createSound({
-        url: 'audio/listen_to_me.wav',
-        onfinish: function() {
-           endColor('n');
-         }
-      });
-      listenTwo = soundManager.createSound({
-        url: 'audio/listen_two.wav',
-        onfinish: function() {
-           endColor('m');
-         }
-      });
-      lookout = soundManager.createSound({
-        url: 'audio/lookout.wav',
-        onfinish: function() {
-           endColor('v');
-         }
-      });
-      ohLord = soundManager.createSound({
-        url: 'audio/oh_lord.wav',
-        onfinish: function() {
-           endColor('c');
-         }
-      });
-      yeah = soundManager.createSound({
-        url: 'audio/yeah.wav',
-        onfinish: function() {
-           endColor('g');
-         }
-      });
+      // note2 = soundManager.createSound({
+      //   url: 'audio/note2.wav',
+      //   onfinish: function() {
+      //      // endColor('p');
+      //    }
+      // });
+      // note3 = soundManager.createSound({
+      //   url: 'audio/note3.wav',
+      //   onfinish: function() {
+      //      // endColor('d');
+      //    }
+      // });
+      // note4 = soundManager.createSound({
+      //   url: 'audio/note4.wav',
+      //   onfinish: function() {
+      //      // endColor('y');
+      //    }
+      // });
+      // note5 = soundManager.createSound({
+      //   url: 'audio/note5.wav',
+      //   onfinish: function() {
+      //      // endColor('u');
+      //    }
+      // });
     },
     ontimeout: function() {
       // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
