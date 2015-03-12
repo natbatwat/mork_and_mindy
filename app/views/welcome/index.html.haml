@@ -7,8 +7,10 @@
 .map-container
   #map-canvas
 
-.mindy-contanier
-  = render :partial => "singapore"
+.mindy-container
+  %span.hide= render :partial => "singapore"
+  %span.hide= render :partial => "tokyo"
+  %span= render :partial => "moon"
 
 .input-container
   %input#input-box{:type => "text", :placeholder => "type here"}
