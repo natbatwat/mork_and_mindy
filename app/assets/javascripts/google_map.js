@@ -17,7 +17,7 @@ $(document).ready(function(){
         var infowindow = new google.maps.InfoWindow({
           map: map,
           position: pos,
-          content: "Welcome. Let's Begin!"
+          content: "Current Location"
         });
 
         map.setCenter(pos);
