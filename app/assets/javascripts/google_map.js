@@ -3,7 +3,7 @@ $(document).ready(function(){
 
   function initialize() {
     var mapOptions = {
-      zoom: 6
+      zoom: 16
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
@@ -17,7 +17,7 @@ $(document).ready(function(){
         var infowindow = new google.maps.InfoWindow({
           map: map,
           position: pos,
-          content: 'Location found using HTML5.'
+          content: "Welcome. Let's Begin!"
         });
 
         map.setCenter(pos);
