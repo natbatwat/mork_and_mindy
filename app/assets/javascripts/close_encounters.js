@@ -7,11 +7,14 @@ $(document).ready(function () {
   var note4;
   var note5;
   var array = []
+  var counter = []
+  $('h2').append('<h3>' + counter.length + '</h3>')
 
-  function compareArrays(array) {
-    array = array.join('');
-    if (array.match(/aprbq/g) === null) {
-      return array = []
+  function compareArrays(arr) {
+    arrayString = arr.join('');
+    if (arrayString.match(/alien/g) === null) {
+      array = []
+      return false;
     } else {
      $('.encounters-container').empty();
      $('.encounters-container').append('<h4>Press the Up Arrow</h4>');
@@ -19,14 +22,24 @@ $(document).ready(function () {
   }
 
   
-  function checkArray(array){
-    console.log(array);
-    if (array.length < 5) {
+  function checkArray(arr){
+    console.log(arr);
+    if (arr.length < 5) {
       console.log('Keep Going');
     } else {
-      compareArrays(array);
+      compareArrays(arr);
     }
   }
+
+  // function incrementCounter(key){
+  //   if (counter.length < 5) {
+  //     console.log(counter);
+  //     counter.push(key);
+  //   } else {
+  //     counter = [];
+  //     return false;
+  //   }
+  // }
 
 
   function startColor(key) {
@@ -47,34 +60,39 @@ $(document).ready(function () {
         array
         note1.play();
         checkArray(array);
+        incrementCounter('a')
         break;
-      case 'p':
-        startColor('p');
-        array.push('p');
+      case 'l':
+        startColor('l');
+        array.push('l');
         array
         note2.play();
         checkArray(array);
+        incrementCounter('l')
         break;
-      case 'r':
-        startColor('r');
-        array.push('r');
+      case 'i':
+        startColor('i');
+        array.push('i');
         array
         note3.play();
         checkArray(array);
+        incrementCounter('i')
         break;
-      case 'b':
-        startColor('b');
-        array.push('b');
+      case 'e':
+        startColor('e');
+        array.push('e');
         array
         note4.play();
         checkArray(array);
+        incrementCounter('e')
         break;
-      case 'q':
-        startColor('q');
-        array.push('q');
+      case 'n':
+        startColor('n');
+        array.push('n');
         array
         note5.play();
         checkArray(array);
+        incrementCounter('n')
         break;
     }
   });
@@ -84,31 +102,31 @@ $(document).ready(function () {
     onready: function() {
       console.log('note1');
       note1 = soundManager.createSound({
-        url: 'assets/audio/note1.wav',
+        url: '/assets/note1.wav',
         onfinish: function() {
            // endColor('a');
         }
       });
       note2 = soundManager.createSound({
-        url: 'audio/note2.wav',
+        url: '/assets/note2.wav',
         onfinish: function() {
            // endColor('p');
          }
       });
       note3 = soundManager.createSound({
-        url: 'audio/note3.wav',
+        url: '/assets/note3.wav',
         onfinish: function() {
            // endColor('d');
          }
       });
       note4 = soundManager.createSound({
-        url: 'audio/note4.wav',
+        url: '/assets/note4.wav',
         onfinish: function() {
            // endColor('y');
          }
       });
       note5 = soundManager.createSound({
-        url: 'audio/note5.wav',
+        url: '/assets/note5.wav',
         onfinish: function() {
            // endColor('u');
          }
