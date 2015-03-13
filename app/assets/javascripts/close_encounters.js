@@ -8,10 +8,11 @@ $(document).ready(function () {
   var note5;
   var array = []
 
-  function compareArrays(array) {
-    array = array.join('');
-    if (array.match(/aprbq/g) === null) {
-      return array = []
+  function compareArrays(arr) {
+    arrayString = arr.join('');
+    if (arrayString.match(/aprbq/g) === null) {
+      array = []
+      return false;
     } else {
      $('.encounters-container').empty();
      $('.encounters-container').append('<h4>Press the Up Arrow</h4>');
@@ -19,12 +20,12 @@ $(document).ready(function () {
   }
 
   
-  function checkArray(array){
-    console.log(array);
-    if (array.length < 5) {
+  function checkArray(arr){
+    console.log(arr);
+    if (arr.length < 5) {
       console.log('Keep Going');
     } else {
-      compareArrays(array);
+      compareArrays(arr);
     }
   }
 
@@ -84,31 +85,31 @@ $(document).ready(function () {
     onready: function() {
       console.log('note1');
       note1 = soundManager.createSound({
-        url: 'assets/audio/note1.wav',
+        url: '/assets/note1.wav',
         onfinish: function() {
            // endColor('a');
         }
       });
       note2 = soundManager.createSound({
-        url: 'audio/note2.wav',
+        url: '/assets/note2.wav',
         onfinish: function() {
            // endColor('p');
          }
       });
       note3 = soundManager.createSound({
-        url: 'audio/note3.wav',
+        url: '/assets/note3.wav',
         onfinish: function() {
            // endColor('d');
          }
       });
       note4 = soundManager.createSound({
-        url: 'audio/note4.wav',
+        url: '/assets/note4.wav',
         onfinish: function() {
            // endColor('y');
          }
       });
       note5 = soundManager.createSound({
-        url: 'audio/note5.wav',
+        url: '/assets/note5.wav',
         onfinish: function() {
            // endColor('u');
          }
