@@ -14,6 +14,7 @@ $(document).ready(function(){
       navigator.geolocation.getCurrentPosition(function(position) {
         var pos = new google.maps.LatLng(position.coords.latitude,
                                          position.coords.longitude);
+        // console.log(pos);
 
         var infowindow = new google.maps.InfoWindow({
           map: map,

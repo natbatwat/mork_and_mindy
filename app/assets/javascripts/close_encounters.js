@@ -8,18 +8,18 @@ $(document).ready(function () {
   var note5;
 
   function startColor(key) {
-    // $('#' + key).css({'background-color': 'white'});
+    $('#' + key).css({'border': 'white'});
   }
 
   function endColor(key) {
-    // $('#' + key).css({'background-color': 'yellow'});
+    $('#' + key).css({'border': 'none'});
   }
       
   $(document).keypress(function(e){
     actualkey=String.fromCharCode(e.keyCode)
     switch(actualkey) {
       case 'a':
-        // startColor('a');
+        startColor('a');
         console.log(actualkey);
         console.log('a');
         note1.play();
