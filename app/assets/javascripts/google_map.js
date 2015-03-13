@@ -4,7 +4,8 @@ $(document).ready(function(){
 
   function initialize() {
     var mapOptions = {
-      zoom: 16
+      zoom: 16,
+      scrollwheel: false
     };
     map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
@@ -14,6 +15,7 @@ $(document).ready(function(){
       navigator.geolocation.getCurrentPosition(function(position) {
         var pos = new google.maps.LatLng(position.coords.latitude,
                                          position.coords.longitude);
+        // console.log(pos);
 
         var infowindow = new google.maps.InfoWindow({
           map: map,

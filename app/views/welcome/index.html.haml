@@ -6,10 +6,15 @@
 
 .map-container
   #map-canvas
+  -# {style: "width: 45%; height: 100%;float:left"}
+  #pano
+  -# { style: "width: 45%; height: 100%;float:left"}
 
 .mindy-container
   %span.hide= render :partial => "singapore"
-  %span= render :partial => "tokyo"
+  %span.hide= render :partial => "tokyo"
+  %span.hide= render :partial => "roswell"
+  %span.hide= render :partial => "london"
   %span.hide= render :partial => "moon"
 
 .input-container
