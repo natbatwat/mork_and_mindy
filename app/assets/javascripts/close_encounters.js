@@ -11,7 +11,7 @@ $(document).ready(function () {
   function compareArrays(array) {
     array = array.join('');
     if (array.match(/aprbq/g) === null) {
-      array = []
+      return array = []
     } else {
      $('.encounters-container').empty();
      $('.encounters-container').append('<h4>Press the Up Arrow</h4>');
