@@ -7,10 +7,12 @@ $(document).ready(function () {
   var note4;
   var note5;
   var array = []
+  var counter = []
+  $('h2').append('<h3>' + counter.length + '</h3>')
 
   function compareArrays(arr) {
     arrayString = arr.join('');
-    if (arrayString.match(/aprbq/g) === null) {
+    if (arrayString.match(/alien/g) === null) {
       array = []
       return false;
     } else {
@@ -28,6 +30,16 @@ $(document).ready(function () {
       compareArrays(arr);
     }
   }
+
+  // function incrementCounter(key){
+  //   if (counter.length < 5) {
+  //     console.log(counter);
+  //     counter.push(key);
+  //   } else {
+  //     counter = [];
+  //     return false;
+  //   }
+  // }
 
 
   function startColor(key) {
@@ -48,34 +60,39 @@ $(document).ready(function () {
         array
         note1.play();
         checkArray(array);
+        incrementCounter('a')
         break;
-      case 'p':
-        startColor('p');
-        array.push('p');
+      case 'l':
+        startColor('l');
+        array.push('l');
         array
         note2.play();
         checkArray(array);
+        incrementCounter('l')
         break;
-      case 'r':
-        startColor('r');
-        array.push('r');
+      case 'i':
+        startColor('i');
+        array.push('i');
         array
         note3.play();
         checkArray(array);
+        incrementCounter('i')
         break;
-      case 'b':
-        startColor('b');
-        array.push('b');
+      case 'e':
+        startColor('e');
+        array.push('e');
         array
         note4.play();
         checkArray(array);
+        incrementCounter('e')
         break;
-      case 'q':
-        startColor('q');
-        array.push('q');
+      case 'n':
+        startColor('n');
+        array.push('n');
         array
         note5.play();
         checkArray(array);
+        incrementCounter('n')
         break;
     }
   });
