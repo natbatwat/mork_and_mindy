@@ -45,8 +45,15 @@ $(document).ready(function(){
 
   $('h2').on("click", function (){
     getLong();
-  });
-
+  }
+  $(document).on("keypress", function(e){
+    console.log(e.keyCode);
+    if (e.keyCode === 38){
+      getLong();
+    } else {
+      console.log('wrong key')
+    }
+  }
 
   // to be cut/pasted at end of challenge before
   $('h1').on("click", function(){
