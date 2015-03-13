@@ -8,7 +8,7 @@ $(document).ready(function () {
   var note5;
   var array = []
   var counter = []
-  $('h2').append('<h3>' + counter.length + '</h3>')
+  // $('h2').append('<h3>' + counter.length + '</h3>')
 
   function compareArrays(arr) {
     arrayString = arr.join('');
