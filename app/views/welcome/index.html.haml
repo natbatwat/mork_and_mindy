@@ -1,11 +1,12 @@
 %h1.header Title
 
-.badges-container
-  %i.fa.fa-mars-double.fa-3x
-  %i.fa.fa-street-view.fa-3x
-  %i.fa.fa-server.fa-3x
-  %i.fa.fa-connectdevelop.fa-3x
-  %i.fa.fa-space-shuttle.fa-3x
+-# .badges-container
+-#   %i.fa.fa-server.fa-3x
+-#   %i.fa.fa-connectdevelop.fa-3x
+-#   %i.fa.fa-picture-o.fa-3x
+-#   %i.fa.fa-fa-puzzle-piece.fa-3x
+-#   %i.fa.fa-street-view.fa-3x.hide
+-#   %i.fa.fa-space-shuttle.fa-3x
 
 .map-container
   #map-canvas
@@ -14,11 +15,11 @@
   -# { style: "width: 45%; height: 100%;float:left"}
 
 .mindy-container
-  %span.hide= render :partial => "singapore"
-  %span.hide= render :partial => "tokyo"
-  %span.hide= render :partial => "roswell"
-  %span.hide= render :partial => "london"
-  %span.hide= render :partial => "moon"
+  %span#sg-partial= render :partial => "singapore"
+  %span#tokyo-partial.hide= render :partial => "tokyo"
+  %span#roswell-partial.hide= render :partial => "roswell"
+  %span#london-partial.hide= render :partial => "london"
+  %span#moon-partial.hide= render :partial => "moon"
 
 .input-container
   %input#input-box{:type => "text", :placeholder => "type here"}

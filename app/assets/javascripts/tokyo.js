@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    if($('.fa-picture-o').hasClass('hide') === false){
+      $('.instagram-feed').addClass('hide');
+    };
     console.log("time to drag!");
     $('.drag-elements-1').sortable({
       cancel: ".disabled"

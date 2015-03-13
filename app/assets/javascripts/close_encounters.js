@@ -20,7 +20,6 @@ $(document).ready(function () {
      $('.encounters-container').append('<h4>Press the Up Arrow</h4>');
     }
   }
-
   
   function checkArray(arr){
     console.log(arr);
@@ -49,54 +48,55 @@ $(document).ready(function () {
   function endColor(key) {
     $('#' + key).css({'border': 'none'});
   }
-      
-  $(document).keypress(function(e){
-    actualkey=String.fromCharCode(e.keyCode)
-    switch(actualkey) {
-      case 'a':
-        startColor('a');
-        console.log(actualkey);
-        array.push('a');
-        array
-        note1.play();
-        checkArray(array);
-        incrementCounter('a')
-        break;
-      case 'l':
-        startColor('l');
-        array.push('l');
-        array
-        note2.play();
-        checkArray(array);
-        incrementCounter('l')
-        break;
-      case 'i':
-        startColor('i');
-        array.push('i');
-        array
-        note3.play();
-        checkArray(array);
-        incrementCounter('i')
-        break;
-      case 'e':
-        startColor('e');
-        array.push('e');
-        array
-        note4.play();
-        checkArray(array);
-        incrementCounter('e')
-        break;
-      case 'n':
-        startColor('n');
-        array.push('n');
-        array
-        note5.play();
-        checkArray(array);
-        incrementCounter('n')
-        break;
-    }
-  });
-
+  if ($('.fa-street-view').hasClass('hide') === false) {
+    console.log('sound on')
+    $(document).keypress(function(e){
+      actualkey=String.fromCharCode(e.keyCode)
+      switch(actualkey) {
+        case 'a':
+          startColor('a');
+          console.log(actualkey);
+          array.push('a');
+          array
+          note1.play();
+          checkArray(array);
+          incrementCounter('a')
+          break;
+        case 'l':
+          startColor('l');
+          array.push('l');
+          array
+          note2.play();
+          checkArray(array);
+          incrementCounter('l')
+          break;
+        case 'i':
+          startColor('i');
+          array.push('i');
+          array
+          note3.play();
+          checkArray(array);
+          incrementCounter('i')
+          break;
+        case 'e':
+          startColor('e');
+          array.push('e');
+          array
+          note4.play();
+          checkArray(array);
+          incrementCounter('e')
+          break;
+        case 'n':
+          startColor('n');
+          array.push('n');
+          array
+          note5.play();
+          checkArray(array);
+          incrementCounter('n')
+          break;
+      }
+    });
+  }
   soundManager.setup({
     url: 'assets/swf',
     onready: function() {
