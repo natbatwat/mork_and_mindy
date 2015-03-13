@@ -6,13 +6,10 @@ $(document).ready(function () {
   var note3;
   var note4;
   var note5;
-  var array = ["a", "p", "r", "b", "q"]
-  var winArray = ["a", "p", "r", "b", "q"]
-
+  var array = []
 
   function compareArrays(array) {
     array = array.join('');
-    console.log(array)
     if (array.match(/aprbq/g) === null) {
       array = []
     } else {
@@ -21,7 +18,15 @@ $(document).ready(function () {
     }
   }
 
-  compareArrays(array);
+  
+  function checkArray(array){
+    console.log(array);
+    if (array.length < 5) {
+      console.log('Keep Going');
+    } else {
+      compareArrays(array);
+    }
+  }
 
 
   function startColor(key) {
@@ -39,27 +44,37 @@ $(document).ready(function () {
         startColor('a');
         console.log(actualkey);
         array.push('a');
+        array
         note1.play();
+        checkArray(array);
         break;
       case 'p':
         startColor('p');
         array.push('p');
+        array
         note2.play();
+        checkArray(array);
         break;
       case 'r':
         startColor('r');
         array.push('r');
+        array
         note3.play();
+        checkArray(array);
         break;
       case 'b':
         startColor('b');
         array.push('b');
+        array
         note4.play();
+        checkArray(array);
         break;
       case 'q':
         startColor('q');
         array.push('q');
+        array
         note5.play();
+        checkArray(array);
         break;
     }
   });
