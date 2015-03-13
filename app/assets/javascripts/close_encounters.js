@@ -8,14 +8,15 @@ $(document).ready(function () {
   var note5;
 
   function startColor(key) {
-    $('#' + key).css({'border': 'white'});
+    $('#' + key).css({'border': '1px solid pink'});
   }
 
   function endColor(key) {
     $('#' + key).css({'border': 'none'});
   }
       
-  $(document).keypress(function(e){
+  $('document').keypress(function(e){
+    console.log('hello');
     actualkey=String.fromCharCode(e.keyCode)
     switch(actualkey) {
       case 'a':
@@ -25,19 +26,19 @@ $(document).ready(function () {
         note1.play();
         break;
       case 'p':
-        // startColor('s');
+        startColor('p');
         note2.play();
         break;
       case 'r':
-        // startColor('d');
+        startColor('r');
         note3.play();
         break;
       case 'b':
-        // startColor('y');
+        startColor('b');
         note4.play();
         break;
       case 'q':
-        // startColor('u');
+        startColor('q');
         note5.play();
         break;
     }
