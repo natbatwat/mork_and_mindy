@@ -2,7 +2,7 @@
   .singapore-photos
     - @singapore_photos.each do |object|
       = image_tag(object.images.thumbnail.url)
-.mindy-text-1
+.mindy-text-1.hide
   %p#sg-text-.active "...where am I?"
   %p#sg-text-.hide "I can't remember anything. I need to get home."
   %p#sg-text-.hide "I'll try connecting."
@@ -16,9 +16,9 @@
   %p#sg-text-.hide Mindy: LIMITED ACCESS. You seem to be currently logged in as GUEST. This isn't a secure server.  
   %p#sg-text-.hide "Access USER 4-2-0-Y-M-L GPS logs."
   %p#sg-text-.hide Mindy: ACCESS GRANTED. READ ONLY. FILE CORRUPTED.
-  %p#sg-text-.hide Mindy: CAPTURED IMAGERY FORM LAST LOGGED LOCATION 
   %button#sg-next-1 Continue
 
-.mindy-text-2.hide
-  %p.active.dy MINDY: CRATER: ENTER TELEPORT DESTINATION
+.mindy-text-2
+  %p#sg-text-.active Mindy: CAPTURED IMAGERY FORM LAST LOGGED LOCATION. 
+  %p.hide.dy ENTER TELEPORT DESTINATION >>>
   %button#sg-next-2 Continue

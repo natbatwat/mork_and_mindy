@@ -1,14 +1,6 @@
 $(document).ready(function(){
   console.log('ready');
-  var next1 = $('#sg-next-1');
-  var input = $('#input-box');
-  next1.click(function(){
-    console.log('next clicked');
-    $('.mindy-text-1').children('.active').addClass('done').removeClass('active');
-    $('.mindy-text-1').children('.hide').first().removeClass('hide').addClass('active');
-    if ($('.mindy-text-1').children('.hide').first().hasClass('dy')) {
-      console.log('dy coming up');
-    }
+  
     if ($('.mindy-text-1').children('.active').first().hasClass('dy')) {
       console.log(input.val());
       line = $('.mindy-text-1').children('.active').first()[0].children[0];
@@ -45,6 +37,8 @@ $(document).ready(function(){
       $('.instagram-feed').addClass('hide');
       $('.mindy-text-2').addClass('hide');
       $('.mindy-text-3').removeClass('hide');
+      $('#sg-partial').addClass('hide');
+      $('#tokyo-partial').removeClass('hide');   
     }
   });
 })
