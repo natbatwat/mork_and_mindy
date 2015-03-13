@@ -36,7 +36,7 @@ $(document).ready(function(){
     }
   }
 
-  $(document).keypress(function(e){
+  $(document).on("keypress", function(e){
     console.log(e.keyCode);
     if (e.keyCode === 38){
       getLong();
