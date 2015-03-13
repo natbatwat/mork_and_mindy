@@ -10,6 +10,7 @@ $(document).ready(function(){
     var latLong = coordinates.split(',')[1];
     var longitude = latLong.substr(5);
     var long = longitude.substr(0, longitude.length-2);
+    console.log(long);
     temps(long);
   }
 
@@ -35,8 +36,14 @@ $(document).ready(function(){
     }
   }
 
-  $('h2').on("click", function (){
-    getLong();
+  $(document).keypress(function(e){
+    console.log(e.keyCode);
+    if (e.keyCode === 38){
+      getLong();
+    } else {
+      console.log('wrong key')
+    }
+    
   });
 
 
@@ -47,15 +54,15 @@ $(document).ready(function(){
       var earlsCourt = new google.maps.LatLng(51.4924328,-0.1933711);
       var mapOptions = {
         center: earlsCourt,
-        zoom: 18
+        zoom: 17
       };
       var map = new google.maps.Map(
           document.getElementById('map-canvas'), mapOptions);
       var panoramaOptions = {
         position: earlsCourt,
         pov: {
-          heading: 34,
-          pitch: 10
+          heading: -30,
+          pitch: 2
         }
       };
       var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
