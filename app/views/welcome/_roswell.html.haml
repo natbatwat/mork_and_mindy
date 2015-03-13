@@ -1,11 +1,14 @@
 .mindy-text-4
-  .mindy-container-roswell
-    .images-container
-      .movie-image#alien
-        = image_tag 'alien.png'
-      .movie-image#et
-        = image_tag 'et.png'
-      .movie-image#groot
-        = image_tag 'groot.png'
-      .movie-image#hutt
-        = image_tag 'hutt.png'
+  %p#ros-text-.active Mindy: USER LOCATION LOG >> YESTERDAY 17:34 E-TIME ROSWELL RECREATIONAL FILM SCREENING CINEMA
+  %p#ros-text-.hide Mindy: I'm unable to locate the exact RECREATIONAL FILM SCREENING CINEMA because you have no access to the film details for exact location cross-referencing. Your clearance only allows POSTER images of your FILM.
+  %button#ros-next Continue
+.mindy-container-roswell
+  .images-container
+    .movie-image#alien.hide
+      = image_tag 'alien.png'
+    .movie-image#et.hide
+      = image_tag 'et.png'
+    .movie-image#guardiansofthegalaxy.hide
+      = image_tag 'groot.png'
+    .movie-image#starwars.hide
+      = image_tag 'hutt.png'

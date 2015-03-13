@@ -15,10 +15,10 @@
   -# { style: "width: 45%; height: 100%;float:left"}
 
 .mindy-container
-  %span#sg-partial= render :partial => "singapore"
+  %span#sg-partial.hide= render :partial => "singapore"
   %span#tokyo-partial.hide= render :partial => "tokyo"
   %span#roswell-partial.hide= render :partial => "roswell"
-  %span#london-partial.hide= render :partial => "london"
+  %span#london-partial= render :partial => "london"
   %span#moon-partial.hide= render :partial => "moon"
 
 .input-container
