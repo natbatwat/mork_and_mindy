@@ -41,7 +41,8 @@ $(document).ready(function(){
 
 
   // to be cut/pasted at end of challenge before
-  $('h1').on("click", function(){
+  $('#london-click').on("click", function(){
+    console.log('lon clicked')
     function initialize() {
       var earlsCourt = new google.maps.LatLng(51.4924328,-0.1933711);
       var mapOptions = {
@@ -59,7 +60,8 @@ $(document).ready(function(){
       };
       var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
       map.setStreetView(panorama);
-      }
+      $('#map-canvas').css({"width": "45%", "height": "100%", "float": "left"})
+    }
     initialize();
   });
 });
