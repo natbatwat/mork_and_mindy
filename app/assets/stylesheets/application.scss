@@ -9,10 +9,12 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
  *= require_tree .
  *= require_self
  */
+
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
 .hide {
   display:none;
@@ -20,4 +22,11 @@
 
 .done {
   display:none;
+}
+
+i {
+  border: 2px black solid;
+  border-radius: 100%;
+  color: red;
+  padding:10px;
 }
