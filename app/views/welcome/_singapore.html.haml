@@ -2,7 +2,7 @@
   .singapore-photos
     - @singapore_photos.each do |object|
       = image_tag(object.images.thumbnail.url)
-.mindy-text-1.hide
+.mindy-text-1
   %p#sg-text-.active "...where am I?"
   %p#sg-text-.hide "I can't remember anything. I need to get home."
   %p#sg-text-.hide "I'll try connecting."
@@ -19,6 +19,6 @@
   %p#sg-text-.hide Mindy: CAPTURED IMAGERY FORM LAST LOGGED LOCATION 
   %button#sg-next-1 Continue
 
-.mindy-text-2
+.mindy-text-2.hide
   %p.active.dy MINDY: CRATER: ENTER TELEPORT DESTINATION
   %button#sg-next-2 Continue
