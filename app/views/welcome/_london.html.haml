@@ -1,5 +1,8 @@
-.mindy-container-london
+.mindy-container-london.hide
+  .instagram-feed-london.hide
+    .london-photos
+      - @london_photos[0..4].each do |object|
+        = image_tag(object.images.thumbnail.url)
   %h1#london-click London
-  %h2 click me
 
 

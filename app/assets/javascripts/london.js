@@ -2,24 +2,36 @@ $(document).ready(function(){
   var tardis_lat = 51.492137
   var tardos_long = -0.192878
 
+  $(document).on("keypress", function(e){
+    console.log(e.keyCode);
+    if (e.keyCode === 38){
+      getLong();
+    } else {
+      console.log('wrong key')
+    }
+  })
+
   function getLong(){
     var mapUrl = $('a').attr('href');
     var newMapUrl = mapUrl.split('=');
-    var nextMapUrl = newMapUrl.svar next1 = $('#sg-next-1');
-  var input = $('#input-box');
-  next1.click(function(){
-    console.log('next clicked');
-    $('.mindy-text-1').children('.active').addClass('done').removeClass('active');
-    $('.mindy-text-1').children('.hide').first().removeClass('hide').addClass('active');
-    if ($('.mindy-text-1').children('.hide').first().hasClass('dy')) {
-      console.log('dy coming up');
-    }hift();
+    var nextMapUrl = newMapUrl. shift();
     var coordinates = newMapUrl.shift();
     var latLong = coordinates.split(',')[1];
     var longitude = latLong.substr(5);
     var long = longitude.substr(0, longitude.length-2);
     temps(long);
   }
+
+  // var next1 = $('#ros-next-1');
+  // var input = $('#input-box');
+
+  // next1.click(function(){
+  //   console.log('next clicked');
+  //   $('.mindy-text-1').children('.active').addClass('done').removeClass('active');
+  //   $('.mindy-text-1').children('.hide').first().removeClass('hide').addClass('active');
+  //   if ($('.mindy-text-1').children('.hide').first().hasClass('dy')) {
+  //     console.log('dy coming up');
+  // }
 
   // console.log(coordinates);
   // console.log(latLong);
@@ -43,38 +55,36 @@ $(document).ready(function(){
     }
   }
 
-  $('h2').on("click", function (){
+  $('#london-click').on("click", function (){
     getLong();
-  }
-  $(document).on("keypress", function(e){
-    console.log(e.keyCode);
-    if (e.keyCode === 38){
-      getLong();
-    } else {
-      console.log('wrong key')
-    }
-  }
+  });
 
   // to be cut/pasted at end of challenge before
   $('h1').on("click", function(){
+    console.log('lon clicked');
     function initialize() {
       var earlsCourt = new google.maps.LatLng(51.4924328,-0.1933711);
       var mapOptions = {
         center: earlsCourt,
         zoom: 18
-      };
-      var map = new google.maps.Map(
-          document.getElementById('map-canvas'), mapOptions);
-      var panoramaOptions = {
-        position: earlsCourt,
-        pov: {
-          heading: 34,
-          pitch: 10
-        }
-      };
-      var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
-      map.setStreetView(panorama);
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var panoramaOptions = {
+      position: earlsCourt,
+      pov: {
+        heading: -30,
+        pitch: 0
       }
+    };
+    var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
+    map.setStreetView(panorama);
+    $('#map-canvas').css({"width": "45%", "height": "100%", "float": "left"})
+    }
     initialize();
+    $('.mindy-container-london').addClass('hide');
+    $('.mindy-container-moon').removeClass('hide');
+    $('#london-partial').addClass('hide');
+    $('#moon-partial').removeClass('hide');
+    $('.instagram-feed-london').addClass('hide');
   });
 });

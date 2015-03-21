@@ -31,34 +31,23 @@ $(document).ready(function() {
       $('.tickthree').removeClass('hide');
       };
     })
-    if ($('.mindy-text-3').find('.hide').length === 0){
-      console.log('new map!');
-      function initialize_tokyo() {
+
+  $('#tok-next-3').click(function(){
+    if (($('.mindy-text-3').find('.hide').length === 0) === true) {
+      console.log('TOKYO')
+      function initialize(){
         var mapOptions = {
+          scrollwheel: false,
           zoom: 13,
-          center: new google.maps.LatLng(35.688259,139.752337)
-        };
-        map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
+          center: new google.maps.LatLng(35.689916,139.754391)
+        }
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
       }
-      initialize_tokyo();
-    };
-    // $('#trash').ready(function(event){
-    //     var trash_x = event.pageX;
-    //     var trash_y = event.pageY;
-    //     console.log(trash_x);
-    //     console.log(trash_y);
-    // })
-    // $('#file-1').on('drag', function(event){
-    //     var file_1_x = event.pageX;
-    //     var file_1_y = event.pageY;
-    // })
-    // $('#file-2').on('drag', function(event){
-    //     var file_2_x = event.pageX;
-    //     var file_2_y = event.pageY;
-    // })
-    // $('#file-3').on('drag', function(event){
-    //     var file_3_x = event.pageX;
-    //     var file_3_y = event.pageY;
-    // })
+      initialize();
+      $('.mindy-text-3').addClass('hide');
+      $('.mindy-text-4').removeClass('hide');
+      $('#tokyo-partial').addClass('hide');
+      $('#roswell-partial').removeClass('hide');
+    }
+  });
 });

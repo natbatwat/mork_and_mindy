@@ -48,8 +48,8 @@ $(document).ready(function () {
   function endColor(key) {
     $('#' + key).css({'border': 'none'});
   }
-  if ($('.fa-street-view').hasClass('hide') === false) {
-    console.log('sound on')
+
+    console.log('sound on');
     $(document).keypress(function(e){
       actualkey=String.fromCharCode(e.keyCode)
       switch(actualkey) {
@@ -134,7 +134,7 @@ $(document).ready(function () {
     },
     ontimeout: function() {
       // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
-    }
+
     
   });
   

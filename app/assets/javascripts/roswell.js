@@ -1,8 +1,9 @@
 $(document).ready(function(){
-  var next4 = $('#ros-next');
+  var next4 = $('#ros-next-button');
   var input = $('#input-box');
   
   next4.click(function(){
+    console.log('next1 clicked');
     $('.mindy-text-4').children('.active').addClass('done').removeClass('active');
     $('.mindy-text-4').children('.hide').first().removeClass('hide').addClass('active');
   })
@@ -24,11 +25,12 @@ $(document).ready(function(){
   console.log('MOVIE SELECTED' + randomMovie);
   randomMovieToUnhide.removeClass('hide');
 
-  $('#ros-next').click(function(){
+  $('#ros-next-button').click(function(){
     if (input.val().toLowerCase().replace(/\s/g,'') === randomMovie) {
       function initialize() {
         console.log('movie map');
         var mapOptions = {
+          scrollwheel: false,
           zoom: 7,
           center: new google.maps.LatLng(33.968333, -105.243333)
         };
@@ -36,6 +38,11 @@ $(document).ready(function(){
             mapOptions);
       }
       initialize();
+      $('.mindy-text-4').addClass('hide');
+      $('.mindy-container-london').removeClass('hide');
+      $('#roswell-partial').addClass('hide');
+      $('#london-partial').removeClass('hide');
+      $('.instagram-feed-london').removeClass('hide');
     };
   })
 
