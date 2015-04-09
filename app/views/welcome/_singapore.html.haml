@@ -2,6 +2,7 @@
   .singapore-photos
     - @singapore_photos[0..4].each do |object|
       = image_tag(object.images.thumbnail.url)
+
 .mindy-text-1
   %p.user-voice#sg-text-.active "...where am I?"
   %p.user-voice#sg-text-.hide "I can't remember anything. I need to get home."
@@ -17,6 +18,7 @@
   %p.mindy-voice#sg-text-.hide "Access USER 4-2-0-Y-M-L GPS logs."
   %p.mindy-voice#sg-text-.hide Mindy: ACCESS GRANTED. READ ONLY. FILE CORRUPTED.
   %button#sg-next-1.hvr-grow Continue
+
 
 .mindy-text-2.hide
   %p.mindy-voice#sg-text-.active Mindy: CAPTURED IMAGERY FORM LAST LOGGED LOCATION. ENTER TELEPORT DESTINATION >>> 
