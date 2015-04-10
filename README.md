@@ -20,15 +20,11 @@ The following libraries/ frameworks were used in the making of this project.
 
 ## Key Functionality
 
-#### 1. Angular Filtered Browse
+#### 1. Progressing narrative of separate <p></p> blocks whilst ensuring scalability and additions - using jQuery & HTML class naming
 
 ---
 
-#### 2. Angular QR Code Generation
-
----
-
-#### 3. Seeding Data with AWS S3 and Faker Gem
+#### 2. Alphabet Rearranging Word Puzzle - using jQuery UI 
 
 
 ## To Do
