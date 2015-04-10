@@ -1,28 +1,35 @@
-== README
+# Mork and Mindy
+#####[Mork and Mindy (Demo) https://www.morkandmindy.herokuapp.com](https://www.morkandmindy.herokuapp.com)
+> *Bringing together venues and budding artists. A win-win situation.*
+> Shori is Japanese for "win", pointing to the underlying philosophy of the app - to create a win-win situation: for budding artists looking to showcase their art, and venues looking for free decor and diversifying their products risk-free.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Versions & Setup
+This web app was tested on **Rails 4.2.0**, **PostgreSQL 9.4.0** and Chrome. 
+To get started, clone the project using the SSH URL `git@github.com:natbatwat/shori.git`, run a `rake db:create db:migrate db:seed` and `bundle install`. 
 
-Things you may want to cover:
+### Dependencies 
+The following libraries/ frameworks were used in the making of this project.
+- jQuery
 
-* Ruby version
+#### NOTE:
 
-* System dependencies
+> This project is still in production but the following code snippets may come in handy for reference. I have categorized them via **main functionality**. Please feel free to reference them! Tweet me [@natbatwat](http://www.twitter.com/natbatwat), or email me at  <a href="mailto:hi@natalieloh.com">hi@natalieloh.com</a> if you have any questions! 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+> I plan to write tutorials on these topics soon. Check my blog [natalieloh.com/blog](http://natalieloh.com/blog) for updates.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Key Functionality
+
+#### 1. Angular Filtered Browse
+
+---
+
+#### 2. Angular QR Code Generation
+
+---
+
+#### 3. Seeding Data with AWS S3 and Faker Gem
+
+
+## To Do
+1. Write tests.
