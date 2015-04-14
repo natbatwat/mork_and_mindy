@@ -1,5 +1,5 @@
 # Mork and Mindy
-#####[Mork and Mindy (Demo) https://morkandmindy.herokuapp.com](https://www.morkandmindy.herokuapp.com)
+#####[Mork and Mindy (Demo) https://morkandmindy.herokuapp.com](https://morkandmindy.herokuapp.com) UNDER CONSTRUCTION (zZZ)
 > *Javascript narrative puzzle game. Help Mork find his way home using GoogleMaps!*
 
 ### Versions & Setup
