@@ -1,7 +1,6 @@
 # Mork and Mindy
-#####[Mork and Mindy (Demo) https://www.morkandmindy.herokuapp.com](https://www.morkandmindy.herokuapp.com)
-> *Bringing together venues and budding artists. A win-win situation.*
-> Shori is Japanese for "win", pointing to the underlying philosophy of the app - to create a win-win situation: for budding artists looking to showcase their art, and venues looking for free decor and diversifying their products risk-free.
+#####[Mork and Mindy (Demo) https://morkandmindy.herokuapp.com](https://www.morkandmindy.herokuapp.com)
+> *Javascript narrative puzzle game. Help Mork find his way home using GoogleMaps!*
 
 ### Versions & Setup
 This web app was tested on **Rails 4.2.0**, **PostgreSQL 9.4.0** and Chrome. 
